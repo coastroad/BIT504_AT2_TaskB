@@ -92,6 +92,8 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	}
 	
 	private void update() {
+		
+		//this runs when the game is first started
 		if(!gameInitialised) {
 			createObjects();
 			gameInitialised = true;
