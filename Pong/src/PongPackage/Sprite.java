@@ -99,7 +99,7 @@ public class Sprite {
 	
 	
 	//getter and setter for color
-	public Color getColour() {return colour;}
+	public Color getColour() {return colour;}  //not used
 	
 	public void setColour(Color colour) {
 		this.colour = colour;

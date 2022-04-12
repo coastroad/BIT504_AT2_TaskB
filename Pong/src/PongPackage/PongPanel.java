@@ -20,6 +20,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	private final static int TIMER_DELAY = 5;
 	private boolean gameInitialised = false;
 	public Ball ball;
+	public GameState gameState = GameState.Initialising;
 	
 	//constructor
 	public PongPanel() {
@@ -45,7 +46,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 		super.paintComponent(g);
 		paintDottedLine(g);
 		
-		if(gameInitialised) {
+		if(gameState != GameState.Initialising) {
 			paintSprite(g, ball);
 		}
 		
@@ -94,9 +95,18 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	private void update() {
 		
 		//this runs when the game is first started
-		if(!gameInitialised) {
-			createObjects();
-			gameInitialised = true;
+		switch(gameState) {
+			case Initialising:{
+				createObjects();
+				gameState = GameState.Playing;
+				break;
+			}
+			case Playing:{
+				break;
+			}
+			case GameOver:{
+				break;
+			}
 		}
 	}//end of update
 	
