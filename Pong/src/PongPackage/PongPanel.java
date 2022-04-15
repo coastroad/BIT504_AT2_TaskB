@@ -13,6 +13,9 @@ import java.awt.BasicStroke;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+//finished working game
+
+
 public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	
 	//variables
