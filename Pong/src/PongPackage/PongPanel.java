@@ -251,7 +251,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 		g.drawString(leftScore, SCORE_TEXT_X, SCORE_TEXT_Y);
 		g.drawString(rightScore, getWidth() - SCORE_TEXT_X, SCORE_TEXT_Y);
 		
-	}//end of paintScores()
+	}//end of paintScores() method
 	
 	private void paintWinner(Graphics g) {
 		String winner = "Win!";
