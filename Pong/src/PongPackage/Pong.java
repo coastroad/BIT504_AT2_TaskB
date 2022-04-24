@@ -32,7 +32,7 @@ public class Pong extends JFrame {
 				new Pong();
 			}
 		});
-		// TODO Auto-generated method stub
+		
 		
 	}
 
